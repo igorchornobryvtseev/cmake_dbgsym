@@ -1,0 +1,10 @@
+# run in project root directory
+
+# configure
+cmake -S . -B cmake_bld -DCMAKE_INSTALL_PREFIX=.
+
+# build
+cmake --build cmake_bld
+
+#install
+cmake --build cmake_bld --target install
