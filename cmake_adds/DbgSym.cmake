@@ -1,6 +1,6 @@
 ### PLUGIN
 set (DEBUG_SYMBOL_SUFFIX ds)
-set(SYMBOLS_BINARY_PATH ${CMAKE_BINARY_DIR}/symbols)
+set(SYMBOLS_BINARY_PATH ${CMAKE_BINARY_DIR}/symdir)    # CMAKE_BINARY_DIR - The path to the top level of the build tree
 file(MAKE_DIRECTORY ${SYMBOLS_BINARY_PATH})             # Create the given directories and their parents as needed.
 message("SYMBOLS_BINARY_PATH=${SYMBOLS_BINARY_PATH}")
 function (createDbgSym binFile)

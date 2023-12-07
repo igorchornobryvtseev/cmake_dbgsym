@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 2.8)
 project(hello_world)
 
 include(GNUInstallDirs)
-set(CMAKE_INSTALL_BINDIR bin-igorc)
-set(CMAKE_INSTALL_LIBDIR bin-igorc)
+set(CMAKE_INSTALL_BINDIR  bin-igorc)
+set(CMAKE_INSTALL_LIBDIR  bin-igorc)
 set(CMAKE_INSTALL_INFODIR info-igorc)
 
 set(CMAKE_INSTALL_RPATH ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR})
