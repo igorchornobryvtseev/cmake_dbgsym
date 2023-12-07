@@ -1,17 +1,18 @@
 # run in project root directory
 
-# configure
 #  -S <path-to-source>          = Explicitly specify a source directory.
 #  -B <path-to-build>           = Explicitly specify a build directory.
 # CMAKE_INSTALL_PREFIX    - determines a "root" for the installed location of headers, libraries, executables, and other resources.
 
+# configure
+# cmake  --trace -S . -B cmake_bld -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=.
 cmake -S . -B cmake_bld -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=.
-cmake -S . -B cmake_bld -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=. --trace
 
 # build
+# cmake --build cmake_bld --debug-output
 cmake --build cmake_bld
-cmake --build cmake_bld --trace
+cmake --build cmake_bld --verbose
 
 # install
 cmake --build cmake_bld --target install
-cmake --build cmake_bld --target install --trace
+cmake --build cmake_bld --target install --verbose
